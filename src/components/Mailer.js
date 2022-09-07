@@ -4,6 +4,7 @@ import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import emailjs from 'emailjs-com';
+import swal from 'sweetalert';
 
 export const Mailer = ({ isSpanish }) => {
     const formInitialDetails = {
@@ -17,7 +18,7 @@ export const Mailer = ({ isSpanish }) => {
     const [buttonText, setButtonText] = useState("Enviar");
     const [buttonTextEng, setButtonTextEng] = useState("Send");
     const [status, setStatus] = useState({});
-    const {EMAIL_SV, EMAIL_TEMP, EMAIL_ID } = process.env
+    const { REACT_APP_EMAIL_SV, REACT_APP_EMAIL_TEMP, REACT_APP_EMAIL_ID } = process.env
 
     const onFormUpdate = (category, value) => {
         setFormDetails({
@@ -28,10 +29,16 @@ export const Mailer = ({ isSpanish }) => {
 
     const sendEmail = (event) => {
         event.preventDefault();
-        emailjs.sendForm( EMAIL_SV, EMAIL_TEMP, event.target, EMAIL_ID)
+        setButtonText('Enviado...');
+        setButtonTextEng('Sending...');
+        emailjs.sendForm(REACT_APP_EMAIL_SV, REACT_APP_EMAIL_TEMP, event.target, REACT_APP_EMAIL_ID)
             .then(response => console.log(response))
             .catch(error => console.log(error))
         setFormDetails(formInitialDetails);
+        swal(isSpanish?"Mensaje enviado exitosamente.":"Message sent successfully");
+        setButtonText("Enviar");
+        setButtonTextEng("Send");
+
     }
 
     return (

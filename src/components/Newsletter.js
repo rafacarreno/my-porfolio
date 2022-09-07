@@ -1,21 +1,25 @@
 import { useState, useEffect } from 'react';
 import { Col, Row, Alert } from "react-bootstrap";
 import emailjs from 'emailjs-com';
+import swal from 'sweetalert';
+
 export const Newsletter = ({ onValidated, status, message, isSpanish }) => {
 
     const [email, setEmail] = useState('');
-    const {EMAIL_SV, EMAIL_TEMP_NEWSLETTER, EMAIL_ID } = process.env
-
+     const {REACT_APP_EMAIL_SV, REACT_APP_EMAIL_TEMP_NEWSLETTER, REACT_APP_EMAIL_ID } = process.env
+     
+     console.log('REACT_APP_EMAIL_SV--->',REACT_APP_EMAIL_SV)
     useEffect(() => {
         if (status === 'success') clearFields();
     }, [status])
    
     const handleSubmit = (event) => {
         event.preventDefault();
-        emailjs.sendForm(EMAIL_SV, EMAIL_TEMP_NEWSLETTER, event.target, EMAIL_ID)
+        emailjs.sendForm(REACT_APP_EMAIL_SV, REACT_APP_EMAIL_TEMP_NEWSLETTER, event.target, REACT_APP_EMAIL_ID)
             .then(response => console.log(response))
             .catch(error => console.log(error))
         setEmail('');
+        swal(isSpanish?"Agregado a Newsletter":"Added to Newsletter");
     }
 
     const clearFields = () => {

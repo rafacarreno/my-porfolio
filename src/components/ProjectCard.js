@@ -18,16 +18,16 @@ export const ProjectCard = ({ title, description, imgUrl, deploy, isSpanish }) =
                     <span>{description}</span>
                     <div></div>
                     {title === 'Pokémon API'
-                        ? <a href={deploy}><button><h6 style={{ color: 'white', marginTop: 15 }}>{isSpanish ? 'Abrir' : 'Open'}</h6></button></a>
+                        ? <a href={deploy}><button style={{ borderColor: 'transparent' }}><h6 style={{ color: 'white', marginTop: 15 }}>{isSpanish ? 'Abrir' : 'Open'}</h6></button></a>
                         : <div>
-                            <Button
+                            <button
                                 style={{ borderColor: 'transparent' }}
                                 onClick={handleOpen}
                             >
                                 <h6 style={{ color: 'white', marginTop: 15 }}>
                                     {isSpanish ? 'Abrir' : 'Open'}
                                 </h6>
-                            </Button>
+                            </button>
                         </div>
                     }
                 </div>
