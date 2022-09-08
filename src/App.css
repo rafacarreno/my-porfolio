@@ -382,7 +382,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto;
   position: relative;
 }
-
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
@@ -934,8 +933,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .modalheaderAux img {
   margin-left: 10%;
+  width: 100px;
 }
-
+.modalIMG {
+  align-items: center;
+  width: 400px;
+}
 .modalheaderAux h2 {
   margin-left: 120%;
 }
@@ -957,3 +960,133 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   --bs-modal-footer-border-color: #121212 !important;
 
 }
+
+@media screen and (max-width: 390px) {
+  .newsletter-bx {
+    padding: 20px 20px;
+    margin-top: -60px;
+  }  
+  .newsletter-bx h3 {
+    line-height: 1.5em;
+    font-size: medium;
+  }  
+  .new-email-bx {
+    padding: 2px;
+  }  
+  .new-email-bx button {
+    padding: 10px 30px;
+    font-weight: 400;
+  }
+
+  /* VENTANA MODAL */
+  
+  .worldgame {
+    padding: 0 0 50px 0;
+    position: relative;
+  }  
+  .worldgame-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+  }  
+  .worldgame h2 {
+    color: #B8B8B8;
+    padding: 5;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+  }  
+  .worldgame h3 {
+    color: #B8B8B8;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+  }  
+  .worldgame h4 {
+    color: #B8B8B8;
+    padding: 5px;
+    text-align: center;
+  }  
+  .worldgame h5 {
+    color: #B8B8B8;
+    font-size: small;
+  }
+  .worldgame p {
+    color: #B8B8B8;
+    font-size: 17px;
+    /* letter-spacing: 0.8px; */
+    /* line-height: 1.5em; */
+    /* margin: 10px 0 60px 0; */
+    text-align:justify;
+  }  
+  .worldgame-slider {
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+  }
+  .stripe{
+    margin-top: 25px;
+  }
+  .cloudinary{
+    margin-top: 35px;
+  }
+  .worldgame-slider .item {
+    padding: 10px;
+    margin: 0;
+    
+  }  
+  .worldgame-slider .item img {
+    width: 50px;
+    margin: 0 auto 15px auto;
+  }
+  .modalIMG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 313px;
+  }  
+  .modalheaderAux {
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .modalheaderAux2 {
+    width: 10px;
+  }
+  .modalheaderAux img {
+    margin-left: 0%;
+    width: 60px;
+  }  
+  .modalheaderAux h2 {
+    margin-left: 20%;
+    font-size: 20px;
+  }  
+  .modalheaderAux Button {
+    margin-left: 30%;
+  }
+  .modalheaderAux Button svg{
+    width: 30px;
+  }
+  .modalAux {
+    padding-top: 80px;
+    --bs-modal-zindex: 99999;
+    --bs-modal-width: 90%;
+    /* color: #121212 !important; */
+    /* -webkit-tap-highlight-color: #121212 !important; */
+    --bs-modal-bg: #121212 !important;
+    --bs-modal-border-color: #121212 !important;
+    --bs-modal-header-border-color: #121212 !important;
+    --bs-modal-body-border-color: #121212 !important;
+    --bs-modal-footer-border-color: #121212 !important;
+  
+  }
+}
+
+

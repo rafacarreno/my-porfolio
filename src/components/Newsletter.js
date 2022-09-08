@@ -8,7 +8,6 @@ export const Newsletter = ({ onValidated, status, message, isSpanish }) => {
     const [email, setEmail] = useState('');
      const {REACT_APP_EMAIL_SV, REACT_APP_EMAIL_TEMP_NEWSLETTER, REACT_APP_EMAIL_ID } = process.env
      
-     console.log('REACT_APP_EMAIL_SV--->',REACT_APP_EMAIL_SV)
     useEffect(() => {
         if (status === 'success') clearFields();
     }, [status])

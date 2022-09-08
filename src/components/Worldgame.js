@@ -36,8 +36,8 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
             items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
+            breakpoint: { max: 390, min: 0 },
+            items: 3
         }
     };
 
@@ -52,13 +52,14 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
         <Modal isOpen={isOpened} className='modalAux'>
             <ModalHeader>
                 <div className="modalheaderAux">
-                    <img src={worldgameLogo} alt='worldgameLogo' style={{ width: 100 }} />
+                    <img src={worldgameLogo} alt='worldgameLogo'  />
                     <h2>WORLDGAME</h2>
                     <button onClick={handleClose} style={{ borderColor: 'transparent' }}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" className="modalheaderAux2" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                        </svg></button>
+                        </svg>
+                    </button>
                 </div>
 
 
@@ -73,9 +74,9 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
                                     ? 'Worldgame es un juego mobile que convina el entretenimiento y el aprendizaje. El objetivo es adivinar un pais mediante una serie de pistas, cuanto menos intentos realices para adivinar el pais, más puntos obtendras.'
                                     : 'Worldgame is a mobile game that combines entertainment and learning. The objective is to guess a country through a series of clues, the fewer attempts you make to guess the country, the more points you get.'}
                         </p>
-                        <h3> {isSpanish?'Tecnologías': 'Technologies'} 📚</h3>
+                        <h3> {isSpanish ? 'Tecnologías' : 'Technologies'} 📚</h3>
                         <h4>Front-End:</h4>
-                        <Carousel responsive={responsive} infinite={true} className='worldgame-slider'>
+                        <Carousel responsive={responsive} infinite={false} className='worldgame-slider'>
                             <div className="item">
                                 <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
                                     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
@@ -132,7 +133,7 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
                             </div>
                         </Carousel>
                         <h4>Back-End:</h4>
-                        <Carousel responsive={responsive} infinite={true} className='worldgame-slider'>
+                        <Carousel responsive={responsive} infinite={false} className='worldgame-slider'>
 
                             <div className="item">
                                 <a href="https://nodejs.org" target="_blank" rel="noreferrer">
@@ -163,7 +164,7 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
                             </div>
                         </Carousel>
                         <h4>Database:</h4>
-                        <Carousel responsive={responsive} infinite={true} className='worldgame-slider'>
+                        <Carousel responsive={responsive} infinite={false} className='worldgame-slider'>
 
                             <div className="item">
                                 <a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
@@ -176,8 +177,8 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
                             </div>
                         </Carousel>
 
-                        <h4>{isSpanish?'Librerias Adicionales:':'Additional Libraries:'}</h4>
-                        <Carousel responsive={responsive} infinite={true} className='worldgame-slider'>
+                        <h4>{isSpanish ? 'Librerias Adicionales:' : 'Additional Libraries:'}</h4>
+                        <Carousel responsive={responsive} infinite={false} className='worldgame-slider'>
 
                             <div className="item">
                                 <a href="https://socket.io" target="_blank" rel="noreferrer">
@@ -201,19 +202,19 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
                                 <a href="https://stripe.com" target="_blank" rel="noreferrer">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/512px-Stripe_Logo%2C_revised_2016.svg.png"
                                         alt="stripe"
-                                        width="40"
-                                        height="40" />
+                                        width="60"
+                                        height="60"/>
                                 </a>
-                                {/* <h5>Stripe </h5> */}
+                                <h5 className="stripe">Stripe</h5> 
                             </div>
                             <div className="item">
                                 <a href="https://cloudinary.com/" target="_blank" rel="noreferrer">
                                     <img src="https://cloudinary-res.cloudinary.com/image/upload/c_scale,w_160/cloudinary_logo_for_black_bg.svg"
                                         alt="cloudinary"
-                                        width="40"
-                                        height="40" />
+                                        width="60"
+                                        height="60" />
                                 </a>
-                                <h5>Cloudinary </h5>
+                                <h5 className="cloudinary">Cloudinary </h5>
                             </div>
                             <div className="item">
                                 <a href="https://nodemailer.com" target="_blank" rel="noreferrer">
@@ -227,31 +228,31 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
                         </Carousel>
 
 
-                        <h2><center>{isSpanish?'Version Movil':'Mobile Version'}</center></h2>
+                        <h2><center>{isSpanish ? 'Version Movil' : 'Mobile Version'}</center></h2>
                         <p align="center">
-                            <img style={{ align: "center", width: "400px" }} src={login} alt='login' />
-                            <img style={{ align: "center", width: "400px" }} src={game} alt='game' />
+                            <img className='modalIMG' src={login} alt='login' />
+                            <img className='modalIMG' src={game} alt='game' />
                         </p>
                         <p align="center">
-                            <img style={{ align: "center", width: "400px" }} src={ranking} alt='ranking' />
-                            <img style={{ align: "center", width: "400px" }} src={perfil} alt='perfil' />
+                            <img className='modalIMG' src={ranking} alt='ranking' />
+                            <img className='modalIMG' src={perfil} alt='perfil' />
                         </p>
-                        <h2><center>{isSpanish?'Panel de Administrador':'Administrator Panel'}</center></h2>
+                        <h2><center>{isSpanish ? 'Panel de Administrador' : 'Administrator Panel'}</center></h2>
                         <p align="center">
-                            <img style={{ align: "center", width: "400px" }} src={homeadmin} alt='homeadmin' />
-                            <img style={{ align: "center", width: "400px" }} src={useradmin} alt='useradmin' />
-                        </p>
-                        <p align="center">
-                            <img style={{ align: "center", width: "400px" }} src={gamesadmin} alt='gamesadmin' />
-                            <img style={{ align: "center", width: "400px" }} src={paymentadmin} alt='paymentadmin' />
+                            <img className='modalIMG' src={homeadmin} alt='homeadmin' />
+                            <img className='modalIMG' src={useradmin} alt='useradmin' />
                         </p>
                         <p align="center">
-                            <img style={{ align: "center", width: "400px" }} src={reviewadmin} alt='reviewadmin' />
+                            <img className='modalIMG' src={gamesadmin} alt='gamesadmin' />
+                            <img className='modalIMG' src={paymentadmin} alt='paymentadmin' />
                         </p>
-                        <h2><center>{isSpanish?'Versión Web':'Web Version'}</center></h2>
                         <p align="center">
-                            <img style={{ align: "center", width: "400px" }} src={loginweb} alt='loginweb' />
-                            <img style={{ align: "center", width: "400px" }} src={gameweb} alt='gameweb' />
+                            <img className='modalIMG' src={reviewadmin} alt='reviewadmin' />
+                        </p>
+                        <h2><center>{isSpanish ? 'Versión Web' : 'Web Version'}</center></h2>
+                        <p align="center">
+                            <img className='modalIMG' src={loginweb} alt='loginweb' />
+                            <img className='modalIMG' src={gameweb} alt='gameweb' />
                         </p>
                         <div style={{
                             display: 'flex',
@@ -274,7 +275,7 @@ export const Worldgame = ({ isSpanish, isOpened, handleIsOpened }) => {
             </ModalBody>
 
             <ModalFooter>
-                <Button onClick={handleClose}>{isSpanish?'Cerrar':'Close'}</Button>
+                <Button onClick={handleClose}>{isSpanish ? 'Cerrar' : 'Close'}</Button>
             </ModalFooter>
 
         </Modal >

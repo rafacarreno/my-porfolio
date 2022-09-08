@@ -58,7 +58,7 @@ export const Banner = ({isSpanish}) => {
                                     <p>{isSpanish?'Estudiante avanzado en Lic. en Administración y Desarrollador Jr. Full Stack, orientado a Frontend tanto en web como mobile. Apasionado en mi desarrollo profesional y mejorando cada dia en este hermoso mundo de la programación.':'Advanced student in Management and Full Stack Developer Jr. , oriented to Frontend both in web and mobile. Passionate about my professional development and improving every day in this beautiful world of programming.'}</p>
                                     <p>{isSpanish?'Hay una frase, muy importante para mi, que me acompaño en todo este proseso y lo sigue haciendo:':'There is a phrase, very important to me, that accompanied me throughout this process and continues to do so:'}</p>
                                     <p>{isSpanish? '"Si no cometes errores es porque no has intentado nada." José Antonio Pascual' :`"If you don't make errors, it's because you haven't tried anything." José Antonio Pascual`}</p>
-                                    <button style={{ marginTop: 0 }} >{isSpanish?'Contactar':"Contact"} <ArrowRightCircle size={25} /></button> 
+                                    {/* <button style={{ marginTop: 0 }} >{isSpanish?'Contactar':"Contact"} <ArrowRightCircle size={25} /></button>  */}
                                     {/* <HashLink to='#connect' style={{ marginTop: 0 }}>
                                         <button className="vvd"><span>Conectar</span></button>
                                     </HashLink> */}
