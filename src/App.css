@@ -932,7 +932,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .modalheaderAux img {
-  margin-left: 10%;
+  margin-left: 0%;
   width: 100px;
 }
 .modalIMG {
@@ -944,7 +944,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .modalheaderAux Button {
-  margin-left: 120%;
+  margin-left: 110%;
 }
 
 .modalAux {
@@ -1073,19 +1073,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   .modalheaderAux Button svg{
     width: 30px;
-  }
-  .modalAux {
-    padding-top: 80px;
-    --bs-modal-zindex: 99999;
-    --bs-modal-width: 90%;
-    /* color: #121212 !important; */
-    /* -webkit-tap-highlight-color: #121212 !important; */
-    --bs-modal-bg: #121212 !important;
-    --bs-modal-border-color: #121212 !important;
-    --bs-modal-header-border-color: #121212 !important;
-    --bs-modal-body-border-color: #121212 !important;
-    --bs-modal-footer-border-color: #121212 !important;
-  
   }
 }
 
