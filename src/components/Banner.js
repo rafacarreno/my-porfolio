@@ -109,7 +109,7 @@ export const Banner = ({ isSpanish }) => {
                                     </div>
                                 </div>
                                 <h5>
-                                    {isSpanish ? 'Estudios:' : 'Studies'}
+                                    {isSpanish ? 'Estudios:' : 'Studies:'}
                                 </h5>
 
                                 <h6>
