@@ -717,7 +717,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 /*---------------CARD---------------*/
-
 .cards1 {
   position: relative;
   width: 300px;
@@ -1030,6 +1029,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .modalheaderAux Button svg{
     width: 30px;
   }
+  /*---------------CARD---------------*/
+.cards1 {
+  margin-left: 8%;
+}
+/*---------------CARD---------------*/
 }
 
 
