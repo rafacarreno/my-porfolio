@@ -21,6 +21,10 @@ export const Mailer = ({ isSpanish }) => {
     const [status, setStatus] = useState({});
     const { REACT_APP_EMAIL_SV, REACT_APP_EMAIL_TEMP, REACT_APP_EMAIL_ID } = process.env
 
+    console.log('REACT_APP_EMAIL_SV',REACT_APP_EMAIL_SV)
+    console.log('REACT_APP_EMAIL_TEMP',REACT_APP_EMAIL_TEMP)
+    console.log('REACT_APP_EMAIL_ID ',REACT_APP_EMAIL_ID)
+
     const onFormUpdate = (category, value) => {
         setFormDetails({
             ...formDetails,

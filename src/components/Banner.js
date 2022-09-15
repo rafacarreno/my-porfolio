@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from '../assets/img/foto2.png';
+import headerImg from '../assets/img/foto4.png';
 import argentina from '../assets/img/ar.png';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';

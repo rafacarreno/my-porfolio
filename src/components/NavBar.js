@@ -5,7 +5,7 @@ import logo from '../assets/img/fotoLogo.png';
 import linkedin from '../assets/img/linkedin-white.png';
 import gitHub from '../assets/img/github-white.png';
 import calendar from '../assets/img/calendar-white.png';
-import { HashLink } from 'react-router-hash-link';
+// import { HashLink } from 'react-router-hash-link';
 import esFlag from '../assets/img/es.png';
 import gbFlag from '../assets/img/gb.png';
 // import GetLanguages from '../redux/action.js';
@@ -50,6 +50,8 @@ export const NavBar = () => {
         setActiveLink(value);
     }
 
+    // console.log('window.screen',window.screen)
+
     return (
         <Router>
             <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
@@ -57,14 +59,27 @@ export const NavBar = () => {
                     <Navbar.Brand href="/">
                         <img src={logo} alt="Logo" style={{ width: 80 }} />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav">
-                        <span className="navbar-toggler-icon"></span>
-                    </Navbar.Toggle>
+                    {scrolled
+                        ?
+                        <Navbar.Toggle aria-controls="basic-navbar-nav">
+                            {/* <span className="navbar-toggler-icon"></span> */}
+                        </Navbar.Toggle>
+                        :
+                        window.screen.width < 500
+                            ?
+                            <div className="linksOnMobil">
+                                <a href="https://www.linkedin.com/in/rafaelcarreno/"><img src={linkedin} alt="linkedin" style={{ width: '70%' }} /></a>
+                                <a href="https://github.com/rafacarreno"><img src={gitHub} alt="gitHub" style={{ width: '70%' }} /></a>
+                                <a href="https://calendly.com/rafacarreno/interviews"><img src={calendar} alt="calendar" style={{ width: '70%' }} /></a>
+                            </div>
+                            :
+                            null
+                    }
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>{lenguage?'Inicio':'Home'}</Nav.Link>
-                            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>{lenguage?'Habilidades':'Skills'}</Nav.Link>
-                            <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>{lenguage?'Proyectos':'Proyects'}</Nav.Link>
+                            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>{lenguage ? 'Inicio' : 'Home'}</Nav.Link>
+                            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>{lenguage ? 'Habilidades' : 'Skills'}</Nav.Link>
+                            <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>{lenguage ? 'Proyectos' : 'Proyects'}</Nav.Link>
                         </Nav>
                         <span className="navbar-text">
                             <div className="social-icon">
@@ -72,9 +87,9 @@ export const NavBar = () => {
                                 <a href="https://github.com/rafacarreno"><img src={gitHub} alt="gitHub" style={{ width: '70%' }} /></a>
                                 <a href="https://calendly.com/rafacarreno/interviews"><img src={calendar} alt="calendar" style={{ width: '70%' }} /></a>
                             </div>
-                            <HashLink to='#connect'>
+                            {/* <HashLink to='#connect'>
                                 <button className="vvd"><span>{lenguage ? 'Contactar' : "Contact"}</span></button>
-                            </HashLink>
+                            </HashLink> */}
                         </span>
                     </Navbar.Collapse>
                     <button
@@ -87,14 +102,14 @@ export const NavBar = () => {
                     </button>
                 </Container>
             </Navbar>
-            <Banner isSpanish = {lenguage} />
-            <Skills isSpanish = {lenguage}/>
-            <Projects isSpanish = {lenguage}/>
-            <Mailer isSpanish = {lenguage}/>
-            <Newsletter isSpanish = {lenguage}/>
-            <Footer isSpanish = {lenguage}/>
-            
-   
+            <Banner isSpanish={lenguage} />
+            <Skills isSpanish={lenguage} />
+            <Projects isSpanish={lenguage} />
+            <Mailer isSpanish={lenguage} />
+            <Newsletter isSpanish={lenguage} />
+            <Footer isSpanish={lenguage} />
+
+
         </Router>
     )
 }
