@@ -23,7 +23,7 @@ export const Mailer = ({ isSpanish }) => {
 
     console.log('REACT_APP_EMAIL_SV',REACT_APP_EMAIL_SV)
     console.log('REACT_APP_EMAIL_TEMP',REACT_APP_EMAIL_TEMP)
-    console.log('REACT_APP_EMAIL_ID ',REACT_APP_EMAIL_ID)
+    console.log('REACT_APP_EMAIL_ID asd',REACT_APP_EMAIL_ID)
 
     const onFormUpdate = (category, value) => {
         setFormDetails({
